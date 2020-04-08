@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Strapped Theme</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+  <div class="jumbotron jumbotron-sub-a">
+    
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Strapped</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index8.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">service</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+      <h1>LOGIN TO KJP</h1>
+      
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">LOGIN</h3>
+            <div class="panel-body">
+            
+              <br><br>
+             <form id="regform">
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control c" id="name" name="name" >
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="email" name="email" >
+                  </div>
+                  <div class="form-group">
+                    <label>password</label>
+                    <input type="password" class="form-control" id="password" name="password" >
+                  </div>
+                  <div class="form-group">
+                    <label>Confirm password</label>
+                    <input type="password" class="form-control" id="password2" name="password2" >
+                  </div> 
+
+                  <button class="btn btn-info" data-toggle="modal" data-target="#Mymodal">Register</button>
+			<div class="modal fade" id="Mymodal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"></button>
+						<h4 class="modal-title" id="Mymodallabel"></h4>
+						</div>
+						<div class="modal-body" id="msg">
+							
+						</div>
+						<div class="modal-footer">
+							<button type="button " class="btn btn-danger" data-dismiss="modal">Close</button>
+							<button type="button" class=" btn btn-success">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+    </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well">
+          <h3>Who We are</h3>
+          <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>About us</h3>
+          <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p>copyright &copy; 2016</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled">
+            <li><a href="#">KJP</a></li>
+            <li><a href="#">KGF</a></li>
+            <li><a href="#">Mahismathi</a></li>
+            <li><a href="#">Vee-kay</a></li>
+            <li><a href="#">Vazha</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled">
+            <li><a href="#">Vignesh</a></li>
+            <li><a href="#">Rocky Bhai</a></li>
+            <li><a href="#">Simham</a></li>
+            <li><a href="#">Aum Vigneswaraya Namah</a></li>
+            <li><a href="#">...</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled">
+            <li><a href="#">Enthaa</a></li>
+            <li><a href="#">Mwonoose</a></li>
+            <li><a href="#">Jaada</a></li>
+            <li><a href="#">aaano</a></li>
+            <li><a href="#">>.></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="">
+    	function register(e)
+    	{
+
+    		e.preventDefault();
+    		console.log('submitted...')
+    		var name=document.getElementById('name').value;
+    		var email=document.getElementById('email').value;
+    		var password=document.getElementById('password').value;
+    		var password2=document.getElementById('password2').value;
+    		console.log(name);
+    		console.log(email);
+    		console.log(password);
+    		console.log(password2);
+    		var msg=document.getElementById('msg');
+    		if(name ==''|| password ==''|| email ==''|| password2 =='')
+    		{
+    			msg.className='alert alert-danger';
+    			msg.innerHTML='Please fill out all fields';
+    		}
+    		else{
+    			if(password.length<5){
+    					msg.className='alert alert-danger';
+    					msg.innerHTML='password should be atleast of length 5';
+
+	    		}
+	    		else
+	    		{
+	    			if(password!=password2){
+
+	    					msg.className='alert alert-danger';
+    					msg.innerHTML='passwords doesnt match';
+	    			}
+	    			else{
+	    				console.log('successfull')
+		    		msg.className='alert alert-success';
+		    		msg.innerHTML=name+' is register with email ' +email;
+	    	}
+	    	}
+    	}
+    	}
+
+    	document.getElementById('regform').addEventListener('submit',register,false);
+    </script>
+        <script
+        src="https://code.jquery.com/jquery-1.12.4.js"
+        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+        crossorigin="anonymous"></script>
+      <script src="js/bootstrap.js"></script>
+</body>
+</html>
